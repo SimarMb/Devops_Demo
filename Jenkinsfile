@@ -29,7 +29,7 @@ pipeline{
                             file: 'target/maven-0.0.1.jar', type: 'jar'
                         ]
                     ],
-                        credentialsId: 'admin', 
+                        credentialsId: 'nexus', 
                         groupId: 'test', 
                         nexusUrl: 'localhost:8081', 
                         nexusVersion: 'nexus3', 
