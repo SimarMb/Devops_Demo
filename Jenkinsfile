@@ -1,4 +1,10 @@
 pipeline{
+   environment {
+      registry = "simaromana/devops_demo"
+      registryCredential = 'dockerhub-pwd'
+      dockerImage = ''
+   }
+   
    agent any
    stages{
    
