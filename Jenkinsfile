@@ -1,6 +1,6 @@
 pipeline{
    environment {
-      registry = "simaromana/devops_demo"
+      registry = "simaromana/devops_demo_1"
       registryCredential = 'dockerhub-pwd'
       dockerImage = ''
    }
