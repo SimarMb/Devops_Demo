@@ -1,7 +1,7 @@
 #getting base image from ubuntu
 FROM ubuntu
 
-MAINTAINER Anilkumar <anilkumar.mechanical3@gmail.com>
+MAINTAINER Simranjeet
 
 EXPOSE 8080
 #ADD target/maven-0.0.1.jar maven-0.0.1.jar
