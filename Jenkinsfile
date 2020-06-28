@@ -16,7 +16,7 @@ pipeline{
             }
         }
         
-        stage ('Build & Package') {
+        '''stage ('Build & Package') {
             steps {
                 withSonarQubeEnv('SonarQubeScanner') {
                     sh 'mvn sonar:sonar \
@@ -25,7 +25,7 @@ pipeline{
                             -Dsonar.login=9921a83026c860fb8a2b4ff863f3a9bc786a972a'
                } 
            }
-        }
+        }'''
 
         stage ('Testing Stage') {
 
@@ -37,7 +37,7 @@ pipeline{
         }
 
 
-        stage ('Deployment Stage') {
+        '''stage ('Deployment Stage') {
             steps {
                 withMaven(maven : 'maven_3_6_3') {
                     nexusArtifactUploader artifacts: [
@@ -77,7 +77,7 @@ pipeline{
          steps{
             sh "docker rmi $registry:$BUILD_NUMBER"
          }
-      }
+      }'''
    }
 }
 
